@@ -12,8 +12,8 @@ with open('best_params.csv','wb') as write_csv:
         if file.endswith(".csv"):
             balance_data = pd.read_csv(os.getcwd()+"/Image-data (1)/"+str(file), sep= ',')
 
-            print "Dataset Lenght:: ", len(balance_data)
-            print "Dataset Shape:: ", balance_data.shape
+            #print "Dataset Lenght:: ", len(balance_data)
+            #print "Dataset Shape:: ", balance_data.shape
 
             X = balance_data.values[:,1:12].astype(float)
             Y = balance_data.values[:,12].astype(float)
