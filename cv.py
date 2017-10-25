@@ -6,7 +6,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn.model_selection import GridSearchCV
 import os
 import csv
-with open('best_params.csv','wb') as write_csv:
+with open('best_params.csv','w') as write_csv:
     writer = csv.writer(write_csv, delimiter=',')
     for file in os.listdir(os.getcwd()+"/Image-data (1)"):
         if file.endswith(".csv"):
