@@ -6,6 +6,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn.model_selection import GridSearchCV
 import os
 import csv
+i = 0
 with open('best_params.csv','w') as write_csv:
     writer = csv.writer(write_csv, delimiter=',')
     for file in os.listdir(os.getcwd()+"/Image-data (1)"):
@@ -29,7 +30,8 @@ with open('best_params.csv','w') as write_csv:
                         'min_samples_leaf': range(50,100,20),
                         'max_features':[4, 5, 6] 
                         }
-
+            print("#number: "+str(i))
+            i = i +1
             print("# Tuning hyper-parameters: " + str(file))
             print()
 
