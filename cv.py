@@ -35,7 +35,7 @@ with open('best_params.csv','w') as write_csv:
             print("# Tuning hyper-parameters: " + str(file))
             print()
 
-            clf = GridSearchCV(ensemble.GradientBoostingRegressor(learning_rate=0.2, n_estimators=70, min_samples_split=600, min_samples_leaf=50, max_depth=8, subsample=0.8), param_grid, cv=5, n_jobs=5)
+            clf = GridSearchCV(ensemble.GradientBoostingRegressor(learning_rate=0.2, n_estimators=70, min_samples_split=56, min_samples_leaf=50, max_depth=8, subsample=0.8), param_grid, cv=5, n_jobs=5)
             clf.fit(X_train, y_train)
 
             print("Best parameters set found on development set:")
