@@ -25,7 +25,7 @@ with open('best_params.csv','w') as write_csv:
                         'n_estimators':range(100,1200,300), 
                         'learning_rate': [0.1,0.05,0.02,0.04],
                         'max_depth':range(5,15,2),
-                        'min_samples_split': range(500,1000,200),
+                        'min_samples_split': range(56,112,14),
                         'min_samples_leaf': range(50,100,20),
                         'max_features':[4, 5, 6] 
                         }
